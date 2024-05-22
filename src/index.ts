@@ -12,6 +12,9 @@ export interface TypeSafeCloudFormationResourceResponse {
   Data?: Record<string, string>;
   NoEcho?: boolean;
 }
+
+const CREATE_FAILED_PHYSICAL_ID="aws-custom-resources:CREATE_FAILED_PHYSICAL_ID";
+
 export type TypeSafeCloudFormationResourceEvent = Omit<CloudFormationCustomResourceEvent, 'ResponseURL'>;
 export type TypesafeCloudFormationResourceHandler = (event: TypeSafeCloudFormationResourceEvent, context: Context) => Promise<TypeSafeCloudFormationResourceResponse>;
 
@@ -41,17 +44,24 @@ export class CustomResourceHandler {
       await this.sendSuccess(result);
     } catch (error) {
       this.logger.error('ERROR:', error);
+
+      if (this.event.RequestType === 'Delete' && this.event.PhysicalResourceId === CREATE_FAILED_PHYSICAL_ID) {
+        return await this.sendSuccess({ })
+      }
+
+      const physicalResourceId = this.event.RequestType === 'Create' ? CREATE_FAILED_PHYSICAL_ID : undefined;
+
       if (error instanceof Error) {
-        this.sendFailure(error.message);
+        await this.sendFailure(error.message, physicalResourceId);
       } else {
-        this.sendFailure(`${error}`);
+        await this.sendFailure(`${error}`, physicalResourceId);
       }
     }
   }
 
   startTimeout() {
-    this.timeoutHandler = setTimeout(() => {
-      this.sendFailure('Custom Resource timeout');
+    this.timeoutHandler = setTimeout(async () => {
+      await this.sendFailure('Custom Resource timeout');
     },
       this.context.getRemainingTimeInMillis() - 1000,
     );
@@ -92,16 +102,17 @@ export class CustomResourceHandler {
     await this.sendHttpResponse(responseBody);
   }
 
-  async sendFailure(message: string) {
+  async sendFailure(message: string, physicalResourceId?: string) {
     this.resetTimeout();
 
     this.logger.debug(`[FAILURE] Recieved failure:`, message);
 
+    const cloudwatchUrl = `https://${process.env.AWS_REGION}.console.aws.amazon.com/cloudwatch/home?region=${process.env.AWS_REGION}#logsV2:log-groups/log-group/${encodeURIComponent(this.context.logGroupName)}/log-events/${encodeURIComponent(this.context.logStreamName)}`
     const responseBody: CloudFormationCustomResourceResponse = {
       /* eslint-disable @typescript-eslint/naming-convention */
       Status: 'FAILED',
-      Reason: `Cloudwatch Log: ${this.context.logStreamName}\n${message}`,
-      PhysicalResourceId: this.getPhysicalResourceId(),
+      Reason: `Cloudwatch Log: ${cloudwatchUrl}\n${message}`,
+      PhysicalResourceId: this.getPhysicalResourceId(physicalResourceId),
       StackId: this.event.StackId,
       RequestId: this.event.RequestId,
       LogicalResourceId: this.event.LogicalResourceId,

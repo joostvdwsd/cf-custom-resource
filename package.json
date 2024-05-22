@@ -1,11 +1,13 @@
 {
-  "name": "@jvdwaalsd/cf-custom-resource",
+  "name": "aws-custom-resources",
   "version": "1.0.0",
   "main": "src/index.ts",
   "repository": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource.git",
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
   "license": "MIT",
-  "packageManager": "yarn@4.2.2",
+  "scripts": {
+    "aws:login": "aws sso login --profile jw-dev"
+  },
   "workspaces": [
     "test"
   ],
@@ -14,9 +16,10 @@
     "@types/node": "^20.12.12",
     "esbuild": "^0.21.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "5.4.3"
   },
   "dependencies": {
     "aws-lambda": "^1.0.7"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }

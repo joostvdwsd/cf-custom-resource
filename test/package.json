@@ -6,7 +6,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk --profile=jw-dev",
+    "aws": "aws --profile jw-dev"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -19,8 +20,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@jvdwaalsd/cf-custom-resource": "workspace:^",
     "aws-cdk-lib": "2.142.1",
+    "aws-custom-resources": "workspace:^",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
   }

@@ -923,19 +923,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jvdwaalsd/cf-custom-resource@workspace:., @jvdwaalsd/cf-custom-resource@workspace:^":
-  version: 0.0.0-use.local
-  resolution: "@jvdwaalsd/cf-custom-resource@workspace:."
-  dependencies:
-    "@types/aws-lambda": "npm:^8.10.138"
-    "@types/node": "npm:^20.12.12"
-    aws-lambda: "npm:^1.0.7"
-    esbuild: "npm:^0.21.3"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.4.5"
-  languageName: unknown
-  linkType: soft
-
 "@npmcli/agent@npm:^2.0.0":
   version: 2.2.2
   resolution: "@npmcli/agent@npm:2.2.2"
@@ -1330,6 +1317,19 @@ __metadata:
   checksum: 10c0/5396d415b5369e2d35b2b430badca73631caa237a7963c0961beff7ed8a9c4c6152b7f5321aa96aaf0569da88fe663291d59b5058660fa52f6c804ee5f9c908e
   languageName: node
   linkType: hard
+
+"aws-custom-resources@workspace:., aws-custom-resources@workspace:^":
+  version: 0.0.0-use.local
+  resolution: "aws-custom-resources@workspace:."
+  dependencies:
+    "@types/aws-lambda": "npm:^8.10.138"
+    "@types/node": "npm:^20.12.12"
+    aws-lambda: "npm:^1.0.7"
+    esbuild: "npm:^0.21.3"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:5.4.3"
+  languageName: unknown
+  linkType: soft
 
 "aws-lambda@npm:^1.0.7":
   version: 1.0.7
@@ -4191,11 +4191,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "test@workspace:test"
   dependencies:
-    "@jvdwaalsd/cf-custom-resource": "workspace:^"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.12.12"
     aws-cdk: "npm:2.142.1"
     aws-cdk-lib: "npm:2.142.1"
+    aws-custom-resources: "workspace:^"
     constructs: "npm:^10.0.0"
     esbuild: "npm:^0.21.3"
     jest: "npm:^29.7.0"
@@ -4204,7 +4204,7 @@ __metadata:
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.4.5"
   bin:
-    test: bin/test.js
+    test: src/test.ts
   languageName: unknown
   linkType: soft
 
@@ -4319,6 +4319,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:5.4.3":
+  version: 5.4.3
+  resolution: "typescript@npm:5.4.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/22443a8760c3668e256c0b34b6b45c359ef6cecc10c42558806177a7d500ab1a7d7aac1f976d712e26989ddf6731d2fbdd3212b7c73290a45127c1c43ba2005a
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^5.4.5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
@@ -4326,6 +4336,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A5.4.3#optional!builtin<compat/typescript>":
+  version: 5.4.3
+  resolution: "typescript@patch:typescript@npm%3A5.4.3#optional!builtin<compat/typescript>::version=5.4.3&hash=5adc0c"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/6e51f8b7e6ec55b897b9e56b67e864fe8f44e30f4a14357aad5dc0f7432db2f01efc0522df0b6c36d361c51f2dc3dcac5c832efd96a404cfabf884e915d38828
   languageName: node
   linkType: hard
 
