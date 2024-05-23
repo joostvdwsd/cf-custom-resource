@@ -1,7 +1,15 @@
 {
   "name": "aws-custom-resources",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "src/index.ts",
+  "publishConfig": {
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts"
+  },
+  "scripts": {
+    "prepack": "yarn tsc --noEmit false",
+    "postpack": "rm -rf lib"
+  },
   "repository": {
     "type": "git",
     "url": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource",

@@ -6,6 +6,8 @@
       "es2020",
       "dom"
     ],
+    "outDir": "lib",
+    "rootDir": "src",
     "noEmit": true,
     "declaration": true,
     "strict": true,
