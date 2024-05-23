@@ -1,0 +1,1 @@
+Simple typescript wrapper for aws cloudformation custom resources.
