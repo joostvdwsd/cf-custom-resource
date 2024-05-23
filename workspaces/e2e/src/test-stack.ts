@@ -1,6 +1,7 @@
-import * as cdk from 'aws-cdk-lib';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class TestStack extends cdk.Stack {
@@ -10,6 +11,6 @@ export class TestStack extends cdk.Stack {
     const handler = new NodejsFunction(this, 'handler');
     new cdk.CustomResource(this, 'cr', {
       serviceToken: handler.functionArn,
-    })
+    });
   }
 }

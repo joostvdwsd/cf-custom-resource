@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "bin": "src/test.ts",
+  "private": true,
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -24,5 +25,13 @@
     "aws-custom-resources": "workspace:^",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource",
+    "directory": "workspaces/e2e"
+  },
+  "engines": {
+    "node": ">=18.12.0"
   }
 }

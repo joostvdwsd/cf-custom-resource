@@ -1,4 +1,4 @@
-const LOG_PREFIX = '[aws-custom-resources]'
+const LOG_PREFIX = '[aws-custom-resources]';
 
 export enum LogLevel {
   disabled,

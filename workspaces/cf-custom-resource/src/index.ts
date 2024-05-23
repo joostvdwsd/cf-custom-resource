@@ -1,11 +1,13 @@
+import * as https from 'https';
+
+import { LogLevel, Logger } from './logger';
+
 import {
   CloudFormationCustomResourceEvent,
   CloudFormationCustomResourceHandler,
   CloudFormationCustomResourceResponse,
   Context,
-} from "aws-lambda";
-import * as https from 'https';
-import { LogLevel, Logger } from './logger';
+} from 'aws-lambda';
 
 export interface TypeSafeCloudFormationResourceResponse {
   PhysicalResourceId?: string;
@@ -13,16 +15,16 @@ export interface TypeSafeCloudFormationResourceResponse {
   NoEcho?: boolean;
 }
 
-const CREATE_FAILED_PHYSICAL_ID="aws-custom-resources:CREATE_FAILED_PHYSICAL_ID";
+const CREATE_FAILED_PHYSICAL_ID = 'aws-custom-resources:CREATE_FAILED_PHYSICAL_ID';
 
 export type TypeSafeCloudFormationResourceEvent = Omit<CloudFormationCustomResourceEvent, 'ResponseURL'>;
 export type TypesafeCloudFormationResourceHandler = (event: TypeSafeCloudFormationResourceEvent, context: Context) => Promise<TypeSafeCloudFormationResourceResponse>;
 
-export function wrapHandler(handler: TypesafeCloudFormationResourceHandler, logLevel: LogLevel = LogLevel.warn) : CloudFormationCustomResourceHandler {
+export function wrapHandler(handler: TypesafeCloudFormationResourceHandler, logLevel: LogLevel = LogLevel.warn): CloudFormationCustomResourceHandler {
   return async (event, context) => {
     const resourceHandler = new CustomResourceHandler(handler, event, context, logLevel);
     await resourceHandler.handle();
-  }
+  };
 }
 
 export class CustomResourceHandler {
@@ -40,13 +42,14 @@ export class CustomResourceHandler {
     this.startTimeout();
 
     try {
-      const result = await this.handlerFunction(this.event, this.context)
+      const result = await this.handlerFunction(this.event, this.context);
       await this.sendSuccess(result);
     } catch (error) {
       this.logger.error('ERROR:', error);
 
       if (this.event.RequestType === 'Delete' && this.event.PhysicalResourceId === CREATE_FAILED_PHYSICAL_ID) {
-        return await this.sendSuccess({ })
+        await this.sendSuccess({ });
+        return;
       }
 
       const physicalResourceId = this.event.RequestType === 'Create' ? CREATE_FAILED_PHYSICAL_ID : undefined;
@@ -57,13 +60,14 @@ export class CustomResourceHandler {
         await this.sendFailure(`${error}`, physicalResourceId);
       }
     }
+    return;
   }
 
   startTimeout() {
     this.timeoutHandler = setTimeout(async () => {
       await this.sendFailure('Custom Resource timeout');
     },
-      this.context.getRemainingTimeInMillis() - 1000,
+    this.context.getRemainingTimeInMillis() - 1000,
     );
   }
 
@@ -86,7 +90,7 @@ export class CustomResourceHandler {
   async sendSuccess(response: TypeSafeCloudFormationResourceResponse) {
     this.resetTimeout();
 
-    this.logger.debug(`[SUCCESS] Recieved response:`, JSON.stringify(response.Data, null, 2), );
+    this.logger.debug('[SUCCESS] Recieved response:', JSON.stringify(response.Data, null, 2));
 
     const responseBody: CloudFormationCustomResourceResponse = {
       /* eslint-disable @typescript-eslint/naming-convention */
@@ -105,9 +109,9 @@ export class CustomResourceHandler {
   async sendFailure(message: string, physicalResourceId?: string) {
     this.resetTimeout();
 
-    this.logger.debug(`[FAILURE] Recieved failure:`, message);
+    this.logger.debug('[FAILURE] Recieved failure:', message);
 
-    const cloudwatchUrl = `https://${process.env.AWS_REGION}.console.aws.amazon.com/cloudwatch/home?region=${process.env.AWS_REGION}#logsV2:log-groups/log-group/${encodeURIComponent(this.context.logGroupName)}/log-events/${encodeURIComponent(this.context.logStreamName)}`
+    const cloudwatchUrl = `https://${process.env.AWS_REGION}.console.aws.amazon.com/cloudwatch/home?region=${process.env.AWS_REGION}#logsV2:log-groups/log-group/${encodeURIComponent(this.context.logGroupName)}/log-events/${encodeURIComponent(this.context.logStreamName)}`;
     const responseBody: CloudFormationCustomResourceResponse = {
       /* eslint-disable @typescript-eslint/naming-convention */
       Status: 'FAILED',
@@ -118,7 +122,7 @@ export class CustomResourceHandler {
       LogicalResourceId: this.event.LogicalResourceId,
       /* eslint-enable @typescript-eslint/naming-convention */
     };
-    await this.sendHttpResponse(responseBody);    
+    await this.sendHttpResponse(responseBody);
   }
 
   async sendHttpResponse(response: CloudFormationCustomResourceResponse) {
@@ -127,7 +131,7 @@ export class CustomResourceHandler {
 
       const url = new URL(this.event.ResponseURL!);
 
-      
+
       const options = {
         hostname: url.hostname,
         port: 443,
@@ -141,9 +145,9 @@ export class CustomResourceHandler {
         },
       };
 
-      this.logger.info('Sending response to cloudformation: ', JSON.stringify({ options, bodyString }, null, 2),);
-      
-      const request = https.request(options, (response) => {
+      this.logger.info('Sending response to cloudformation: ', JSON.stringify({ options, bodyString }, null, 2));
+
+      const request = https.request(options, response => {
         this.logger.debug('HTTP Response:', {
           status: response.statusCode,
           headers: response.headers,
@@ -151,14 +155,13 @@ export class CustomResourceHandler {
         resolve();
       });
 
-      request.on('error', (error) => {
+      request.on('error', error => {
         this.logger.error('sendHttpResponse stream Error:', JSON.stringify(error));
         reject(error);
       });
 
       request.write(bodyString);
       request.end();
-    })
+    });
   }
-
 }
