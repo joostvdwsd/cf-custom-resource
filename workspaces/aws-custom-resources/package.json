@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource",
-    "directory": "workspaces/cf-custom-resource"
+    "directory": "workspaces/aws-custom-resources"
   },
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
   "license": "MIT",

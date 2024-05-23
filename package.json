@@ -16,7 +16,6 @@
     "validate:all": "yarn validate:constraints && yarn validate:lint",
     "validate:constraints": "yarn constraints",
     "validate:lint": "yarn eslint",
-
     "eslint": "eslint **/*.ts"
   },
   "workspaces": [

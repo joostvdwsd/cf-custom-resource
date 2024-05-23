@@ -16,7 +16,7 @@ const RAW_RUNTIME_STATE =
     },\
     {\
       "name": "aws-custom-resources",\
-      "reference": "workspace:workspaces/cf-custom-resource"\
+      "reference": "workspace:workspaces/aws-custom-resources"\
     },\
     {\
       "name": "test",\
@@ -26,7 +26,7 @@ const RAW_RUNTIME_STATE =
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
-    ["aws-custom-resources", ["workspace:workspaces/cf-custom-resource"]],\
+    ["aws-custom-resources", ["workspace:workspaces/aws-custom-resources"]],\
     ["aws-custom-resources-root", ["workspace:."]],\
     ["test", ["workspace:workspaces/e2e"]]\
   ],\
@@ -3825,15 +3825,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["aws-custom-resources", [\
-      ["workspace:workspaces/cf-custom-resource", {\
-        "packageLocation": "./workspaces/cf-custom-resource/",\
+      ["workspace:workspaces/aws-custom-resources", {\
+        "packageLocation": "./workspaces/aws-custom-resources/",\
         "packageDependencies": [\
-          ["aws-custom-resources", "workspace:workspaces/cf-custom-resource"],\
+          ["aws-custom-resources", "workspace:workspaces/aws-custom-resources"],\
           ["@types/aws-lambda", "npm:8.10.138"],\
           ["@types/node", "npm:20.12.12"],\
           ["aws-lambda", "npm:1.0.7"],\
           ["esbuild", "npm:0.21.3"],\
-          ["ts-node", "virtual:5b0c8daba5d8d9663d007055a20adb12700b80aff2c52aa311e3cae47131f180339602ae9c618f01f1fd347e48c4f7dbf684442249088b68ab4af76557bfd5a3#npm:10.9.2"],\
+          ["ts-node", "virtual:5a0e74a10bc72e4f9a91ba850218a5e7ff679b5848efba110e0a53ffdeb7e93e97c655ab47999f299d8c83b461482bf192e0ba28b73206445110500cdc7531e6#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"]\
         ],\
         "linkType": "SOFT"\
@@ -9387,13 +9387,13 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.12.12"],\
           ["aws-cdk", "npm:2.142.1"],\
           ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.142.1"],\
-          ["aws-custom-resources", "workspace:workspaces/cf-custom-resource"],\
+          ["aws-custom-resources", "workspace:workspaces/aws-custom-resources"],\
           ["constructs", "npm:10.3.0"],\
           ["esbuild", "npm:0.21.3"],\
           ["jest", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:29.7.0"],\
           ["source-map-support", "npm:0.5.21"],\
           ["ts-jest", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:29.1.3"],\
-          ["ts-node", "virtual:5b0c8daba5d8d9663d007055a20adb12700b80aff2c52aa311e3cae47131f180339602ae9c618f01f1fd347e48c4f7dbf684442249088b68ab4af76557bfd5a3#npm:10.9.2"],\
+          ["ts-node", "virtual:5a0e74a10bc72e4f9a91ba850218a5e7ff679b5848efba110e0a53ffdeb7e93e97c655ab47999f299d8c83b461482bf192e0ba28b73206445110500cdc7531e6#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"]\
         ],\
         "linkType": "SOFT"\
@@ -9539,10 +9539,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:5b0c8daba5d8d9663d007055a20adb12700b80aff2c52aa311e3cae47131f180339602ae9c618f01f1fd347e48c4f7dbf684442249088b68ab4af76557bfd5a3#npm:10.9.2", {\
-        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-663d6bec1a/4/.yarn/berry/cache/ts-node-npm-10.9.2-3f3890b9ac-10c0.zip/node_modules/ts-node/",\
+      ["virtual:5a0e74a10bc72e4f9a91ba850218a5e7ff679b5848efba110e0a53ffdeb7e93e97c655ab47999f299d8c83b461482bf192e0ba28b73206445110500cdc7531e6#npm:10.9.2", {\
+        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-7a4976bd6a/4/.yarn/berry/cache/ts-node-npm-10.9.2-3f3890b9ac-10c0.zip/node_modules/ts-node/",\
         "packageDependencies": [\
-          ["ts-node", "virtual:5b0c8daba5d8d9663d007055a20adb12700b80aff2c52aa311e3cae47131f180339602ae9c618f01f1fd347e48c4f7dbf684442249088b68ab4af76557bfd5a3#npm:10.9.2"],\
+          ["ts-node", "virtual:5a0e74a10bc72e4f9a91ba850218a5e7ff679b5848efba110e0a53ffdeb7e93e97c655ab47999f299d8c83b461482bf192e0ba28b73206445110500cdc7531e6#npm:10.9.2"],\
           ["@cspotcode/source-map-support", "npm:0.8.1"],\
           ["@swc/core", null],\
           ["@swc/wasm", null],\

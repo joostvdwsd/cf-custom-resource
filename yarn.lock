@@ -2644,9 +2644,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"aws-custom-resources@workspace:^, aws-custom-resources@workspace:workspaces/cf-custom-resource":
+"aws-custom-resources@workspace:^, aws-custom-resources@workspace:workspaces/aws-custom-resources":
   version: 0.0.0-use.local
-  resolution: "aws-custom-resources@workspace:workspaces/cf-custom-resource"
+  resolution: "aws-custom-resources@workspace:workspaces/aws-custom-resources"
   dependencies:
     "@types/aws-lambda": "npm:^8.10.138"
     "@types/node": "npm:^20.12.12"
