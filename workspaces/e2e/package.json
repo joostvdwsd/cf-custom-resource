@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource",
+    "url": "https://github.com/joostvdwsd/cf-custom-resource",
     "directory": "workspaces/e2e"
   },
   "engines": {

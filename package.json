@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "repository": {
     "type": "git",
-    "url": "https://joostvdwsd@github.com/joostvdwsd/cf-custom-resource",
+    "url": "https://github.com/joostvdwsd/cf-custom-resource",
     "directory": "."
   },
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
