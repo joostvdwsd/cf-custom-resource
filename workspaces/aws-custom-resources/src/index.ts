@@ -115,7 +115,7 @@ export class CustomResourceHandler {
     const responseBody: CloudFormationCustomResourceResponse = {
       /* eslint-disable @typescript-eslint/naming-convention */
       Status: 'FAILED',
-      Reason: `Cloudwatch Log: ${cloudwatchUrl}\n${message}`,
+      Reason: `${message}\n\nCloudwatch Log: ${cloudwatchUrl}`,
       PhysicalResourceId: this.getPhysicalResourceId(physicalResourceId),
       StackId: this.event.StackId,
       RequestId: this.event.RequestId,
