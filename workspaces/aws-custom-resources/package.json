@@ -20,14 +20,16 @@
   },
   "keywords": [
     "aws",
-    "custom resource",
+    "custom-resource",
     "typescript",
     "cloudformation",
+    "custom",
+    "resource",
     "cfn",
     "cdk"
   ],
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.138",
     "@types/jest": "^29.5.12",
