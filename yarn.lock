@@ -2641,6 +2641,8 @@ __metadata:
     "@types/node": "npm:^20.12.12"
     "@yarnpkg/types": "npm:^4.0.0"
     eslint: "npm:^8"
+    jest: "npm:^29.7.0"
+    ts-jest: "npm:^29.1.3"
     typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
