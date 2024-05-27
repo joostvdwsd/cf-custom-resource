@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joostvdwsd/cf-custom-resource",
+    "url": "https://github.com/joostvdwsd/aws-custom-resources",
     "directory": "workspaces/aws-custom-resources"
   },
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
