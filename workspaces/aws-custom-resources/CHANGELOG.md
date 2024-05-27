@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file
 
 
+## [0.0.3](https://github.com/joostvdwsd/aws-custom-resources/compare/v0.0.2...v0.0.3) (Mon May 27 2024)
+
+### feat
+
+* Added some extra info ([8aa1937](https://github.com/joostvdwsd/aws-custom-resources/commit/8aa19378c4611b882c566102f9b45664655cadb9))
+
 ## [0.0.2](https://github.com/joostvdwsd/aws-custom-resources/compare/v0.0.1...v0.0.2) (Mon May 27 2024)
 
 ### feat
