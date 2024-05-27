@@ -2637,6 +2637,7 @@ __metadata:
     "@cp-utils/constraints-config": "npm:^0.0.7"
     "@cp-utils/eslint-config": "npm:^0.0.6"
     "@cp-utils/gitversion": "npm:^0.0.49"
+    "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.12.12"
     "@yarnpkg/types": "npm:^4.0.0"
     eslint: "npm:^8"
@@ -2649,6 +2650,7 @@ __metadata:
   resolution: "aws-custom-resources@workspace:workspaces/aws-custom-resources"
   dependencies:
     "@types/aws-lambda": "npm:^8.10.138"
+    "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.12.12"
     aws-lambda: "npm:^1.0.7"
     esbuild: "npm:^0.21.3"

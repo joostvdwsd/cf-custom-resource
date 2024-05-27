@@ -25,6 +25,7 @@
     "@cp-utils/constraints-config": "^0.0.7",
     "@cp-utils/eslint-config": "^0.0.6",
     "@cp-utils/gitversion": "^0.0.49",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.12.12",
     "@yarnpkg/types": "^4.0.0",
     "eslint": "^8",

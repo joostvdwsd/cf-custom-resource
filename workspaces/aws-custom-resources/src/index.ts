@@ -29,9 +29,9 @@ export function wrapHandler(handler: TypesafeCloudFormationResourceHandler, logL
 
 export class CustomResourceHandler {
   private logger: Logger;
-  private timeoutHandler: NodeJS.Timeout;
+  private timeoutHandler?: NodeJS.Timeout;
 
-  constructor(private handlerFunction: TypesafeCloudFormationResourceHandler, private event: CloudFormationCustomResourceEvent, private context: Context, private logLevel: LogLevel) {
+  constructor(private handlerFunction: TypesafeCloudFormationResourceHandler, private event: CloudFormationCustomResourceEvent, private context: Context, logLevel: LogLevel) {
     this.logger = new Logger(logLevel);
   }
 
@@ -72,7 +72,9 @@ export class CustomResourceHandler {
   }
 
   resetTimeout() {
-    clearTimeout(this.timeoutHandler);
+    if (this.timeoutHandler) {
+      clearTimeout(this.timeoutHandler);
+    }
   }
 
   getPhysicalResourceId(PhysicalResourceId?: string): string {
