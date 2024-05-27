@@ -18,6 +18,14 @@
     "url": "https://github.com/joostvdwsd/aws-custom-resources",
     "directory": "workspaces/aws-custom-resources"
   },
+  "keywords": [
+    "aws",
+    "custom resource",
+    "typescript",
+    "cloudformation",
+    "cfn",
+    "cdk"
+  ],
   "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
   "license": "MIT",
   "devDependencies": {

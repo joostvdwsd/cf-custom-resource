@@ -6,8 +6,7 @@ Helper package to work quick and safely with AWS custom resources using typescri
 
 ## Using the package
 
-We use a ***wrapHandler*** function to wrap the actual handler. This wrapper handles all errors and response to communicate back to cloudformation. It also create a stong typed interface so all request parameters and response parameters are suggested by your code completion.
-
+We use a ***wrapHandler*** function to wrap the actual handler. This wrapper handles all errors and responses to communicate back to cloudformation. It also creates a stong typed interface so all request parameters and response parameters are suggested by your code completion.
 
 ### Minimal example
 
