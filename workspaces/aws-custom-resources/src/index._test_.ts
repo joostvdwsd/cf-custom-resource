@@ -1,4 +1,4 @@
-import https from 'https';
+import * as https from 'https';
 
 import { cfRequest, functionContext } from './_tests_/mocks';
 import { wrapHandler } from '.';

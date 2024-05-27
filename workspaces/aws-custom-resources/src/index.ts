@@ -1,4 +1,4 @@
-import https from 'https';
+import * as https from 'https';
 
 import { LogLevel, Logger } from './logger';
 
