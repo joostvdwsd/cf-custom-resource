@@ -2,3 +2,4 @@
 !.yarn/releases
 !.yarn/sdks
 gitversion.out
+coverage

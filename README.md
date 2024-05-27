@@ -30,12 +30,12 @@ const client = new AppClient();
 
 export const handler = wrapHandler(async (event, context) => {
   if (event.RequestType === 'Delete') {
-    await client.deleteApplicationRegistration(event.props.applicationId);
+    await client.deleteApplicationRegistration(event.ResourceProperties.applicationId);
     return {};
   }
 
   // Other options are 'Create' and 'Update'. In this example we consider them equal
-  const id = await client.registerApplication(event.props.applicationId, context.logGroupName);
+  const id = await client.registerApplication(event.ResourceProperties.applicationId, context.logGroupName);
   return {
     PhysicalResourceId: id,
     NoEcho: true

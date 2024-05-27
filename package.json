@@ -35,5 +35,24 @@
   "private": true,
   "engines": {
     "node": ">=18.12.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*._test_.ts"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": [
+        "ts-jest",
+        {
+          "diagnostics": {
+            "ignoreCodes": [
+              151001
+            ]
+          }
+        }
+      ]
+    }
   }
 }
