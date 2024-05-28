@@ -9,3 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    automerged_updates:
+      - match:
+          dependency_type: "development"
+          update_type: "all"
