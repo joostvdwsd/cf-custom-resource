@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@cp-utils/constraints-config", "npm:0.0.7"],\
+          ["@cp-utils/constraints-config", "npm:0.1.2"],\
           ["@cp-utils/eslint-config", "virtual:316715ce606ccd0efc609c7c6e3919a9c35b989ee16c10781c64bf0f0a6709fac85ef5fc8a4f62c12c75ae11b66c5971ccd92800e6114d6ec25e16dd80a12cbc#npm:0.0.6"],\
           ["@cp-utils/gitversion", "npm:0.0.49"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -1049,10 +1049,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@cp-utils/constraints-config", [\
-      ["npm:0.0.7", {\
-        "packageLocation": "../../.yarn/berry/cache/@cp-utils-constraints-config-npm-0.0.7-280b9dd4b5-10c0.zip/node_modules/@cp-utils/constraints-config/",\
+      ["npm:0.1.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@cp-utils-constraints-config-npm-0.1.2-dab7da5aa8-10c0.zip/node_modules/@cp-utils/constraints-config/",\
         "packageDependencies": [\
-          ["@cp-utils/constraints-config", "npm:0.0.7"],\
+          ["@cp-utils/constraints-config", "npm:0.1.2"],\
           ["@yarnpkg/types", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -3850,7 +3850,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["aws-custom-resources-root", "workspace:."],\
-          ["@cp-utils/constraints-config", "npm:0.0.7"],\
+          ["@cp-utils/constraints-config", "npm:0.1.2"],\
           ["@cp-utils/eslint-config", "virtual:316715ce606ccd0efc609c7c6e3919a9c35b989ee16c10781c64bf0f0a6709fac85ef5fc8a4f62c12c75ae11b66c5971ccd92800e6114d6ec25e16dd80a12cbc#npm:0.0.6"],\
           ["@cp-utils/gitversion", "npm:0.0.49"],\
           ["@types/jest", "npm:29.5.12"],\
