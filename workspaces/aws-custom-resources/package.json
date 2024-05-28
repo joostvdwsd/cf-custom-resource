@@ -28,7 +28,7 @@
     "cfn",
     "cdk"
   ],
-  "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
+  "author": "Joost van der Waal <joost@jvdwaal.nl>",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.138",

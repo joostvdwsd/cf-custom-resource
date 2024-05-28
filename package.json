@@ -7,7 +7,7 @@
     "url": "https://github.com/joostvdwsd/aws-custom-resources",
     "directory": "."
   },
-  "author": "Joost van der Waal <joost.vanderwaal@aegon.nl>",
+  "author": "Joost van der Waal <joost@jvdwaal.nl>",
   "license": "MIT",
   "scripts": {
     "aws:login": "aws sso login --profile jw-dev",
