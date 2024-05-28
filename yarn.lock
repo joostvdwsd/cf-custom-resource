@@ -597,12 +597,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cp-utils/constraints-config@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "@cp-utils/constraints-config@npm:0.0.7"
+"@cp-utils/constraints-config@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "@cp-utils/constraints-config@npm:0.1.2"
   dependencies:
     "@yarnpkg/types": "npm:^4.0.0"
-  checksum: 10c0/c2f8201464ee8590b547e557cbe31e0a2f4db6e6722fbcbfc3ad384561f092dfa03854a11b308b991fea05bb4c53b14406736c1c9f26bf837b5320088304d732
+  checksum: 10c0/973324a6312317110ec10d52d7511d78bb5360b4eb15a92309bc7730a3c4a3ff3bbe8ac058199f6ff7a495d40284d1a45699d5991ceab25b6f9673639fe3ebc6
   languageName: node
   linkType: hard
 
@@ -2616,9 +2616,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk@npm:2.142.1":
-  version: 2.142.1
-  resolution: "aws-cdk@npm:2.142.1"
+"aws-cdk@npm:2.143.0":
+  version: 2.143.0
+  resolution: "aws-cdk@npm:2.143.0"
   dependencies:
     fsevents: "npm:2.3.2"
   dependenciesMeta:
@@ -2626,7 +2626,7 @@ __metadata:
       optional: true
   bin:
     cdk: bin/cdk
-  checksum: 10c0/5396d415b5369e2d35b2b430badca73631caa237a7963c0961beff7ed8a9c4c6152b7f5321aa96aaf0569da88fe663291d59b5058660fa52f6c804ee5f9c908e
+  checksum: 10c0/5b319a6420e76fa2e66e5b30c20f2c8015ee9121a73cfd1f47d190d5ec277b9da9de3df66f7100846b0e65d6c86449da4bf00eea3c30d8fc96fedf68b9918c98
   languageName: node
   linkType: hard
 
@@ -2634,7 +2634,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "aws-custom-resources-root@workspace:."
   dependencies:
-    "@cp-utils/constraints-config": "npm:^0.0.7"
+    "@cp-utils/constraints-config": "npm:^0.1.2"
     "@cp-utils/eslint-config": "npm:^0.0.6"
     "@cp-utils/gitversion": "npm:^0.0.49"
     "@types/jest": "npm:^29.5.12"
@@ -7541,7 +7541,7 @@ __metadata:
   dependencies:
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.12.12"
-    aws-cdk: "npm:2.142.1"
+    aws-cdk: "npm:2.143.0"
     aws-cdk-lib: "npm:2.142.1"
     aws-custom-resources: "workspace:^"
     constructs: "npm:^10.0.0"
