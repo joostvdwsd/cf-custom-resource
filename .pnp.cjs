@@ -3800,17 +3800,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["aws-cdk-lib", [\
-      ["npm:2.143.0", {\
-        "packageLocation": "../../.yarn/berry/cache/aws-cdk-lib-npm-2.143.0-3e599ef7f2-10c0.zip/node_modules/aws-cdk-lib/",\
+      ["npm:2.144.0", {\
+        "packageLocation": "../../.yarn/berry/cache/aws-cdk-lib-npm-2.144.0-ae4023972b-10c0.zip/node_modules/aws-cdk-lib/",\
         "packageDependencies": [\
-          ["aws-cdk-lib", "npm:2.143.0"]\
+          ["aws-cdk-lib", "npm:2.144.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.143.0", {\
-        "packageLocation": "./.yarn/__virtual__/aws-cdk-lib-virtual-e33c33d6a8/3/.yarn/berry/cache/aws-cdk-lib-npm-2.143.0-3e599ef7f2-10c0.zip/node_modules/aws-cdk-lib/",\
+      ["virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.144.0", {\
+        "packageLocation": "./.yarn/__virtual__/aws-cdk-lib-virtual-1154a13d24/3/.yarn/berry/cache/aws-cdk-lib-npm-2.144.0-ae4023972b-10c0.zip/node_modules/aws-cdk-lib/",\
         "packageDependencies": [\
-          ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.143.0"],\
+          ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.144.0"],\
           ["@aws-cdk/asset-awscli-v1", "npm:2.2.202"],\
           ["@aws-cdk/asset-kubectl-v20", "npm:2.1.2"],\
           ["@aws-cdk/asset-node-proxy-agent-v6", "npm:2.0.3"],\
@@ -9403,7 +9403,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.14.0"],\
           ["aws-cdk", "npm:2.143.0"],\
-          ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.143.0"],\
+          ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.144.0"],\
           ["aws-custom-resources", "workspace:workspaces/aws-custom-resources"],\
           ["constructs", "npm:10.3.0"],\
           ["esbuild", "npm:0.21.4"],\
