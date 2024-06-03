@@ -1495,7 +1495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.12.12":
+"@types/node@npm:*":
   version: 20.12.12
   resolution: "@types/node@npm:20.12.12"
   dependencies:
@@ -1510,6 +1510,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/0a17cf55c4e6ec90fdb47e73fde44a613ec0f6cd02619b156b1e8fd3f81f8b3346b06ca0757024ddff304d44c8ce5b99570eac8fa2d6baa0fc12e4b2146ac7c6
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.14.0":
+  version: 20.14.0
+  resolution: "@types/node@npm:20.14.0"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/29ccc7592e9ca6b81d00f3a6673241d08e9042d801b10adfd9ebcbbf326208e0a0133a8d146158db18d02a68b85d9ce1fd94e6e1e5be0da263129bf6e42eb22d
   languageName: node
   linkType: hard
 
@@ -2638,7 +2647,7 @@ __metadata:
     "@cp-utils/eslint-config": "npm:^0.0.7"
     "@cp-utils/gitversion": "npm:^0.0.49"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.14.0"
     "@yarnpkg/types": "npm:^4.0.0"
     eslint: "npm:^8"
     jest: "npm:^29.7.0"
@@ -2653,7 +2662,7 @@ __metadata:
   dependencies:
     "@types/aws-lambda": "npm:^8.10.138"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.14.0"
     aws-lambda: "npm:^1.0.7"
     esbuild: "npm:^0.21.4"
     jest: "npm:^29.7.0"
@@ -7540,7 +7549,7 @@ __metadata:
   resolution: "test@workspace:workspaces/e2e"
   dependencies:
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.12.12"
+    "@types/node": "npm:^20.14.0"
     aws-cdk: "npm:2.143.0"
     aws-cdk-lib: "npm:2.143.0"
     aws-custom-resources: "workspace:^"
