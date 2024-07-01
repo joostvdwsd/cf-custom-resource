@@ -3790,10 +3790,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["aws-cdk", [\
-      ["npm:2.145.0", {\
-        "packageLocation": "./.yarn/unplugged/aws-cdk-npm-2.145.0-6e3b9e9717/node_modules/aws-cdk/",\
+      ["npm:2.147.2", {\
+        "packageLocation": "./.yarn/unplugged/aws-cdk-npm-2.147.2-827dbbaf06/node_modules/aws-cdk/",\
         "packageDependencies": [\
-          ["aws-cdk", "npm:2.145.0"],\
+          ["aws-cdk", "npm:2.147.2"],\
           ["fsevents", "patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"]\
         ],\
         "linkType": "HARD"\
@@ -9402,7 +9402,7 @@ const RAW_RUNTIME_STATE =
           ["test", "workspace:workspaces/e2e"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.14.2"],\
-          ["aws-cdk", "npm:2.145.0"],\
+          ["aws-cdk", "npm:2.147.2"],\
           ["aws-cdk-lib", "virtual:f1920ea60e25cba883b05a74591d6ade3758026dc4f08ae41f91b7dafe9ecaff145e53ad8a0cbaa21ea63dda6cbd9ecbffd90b15bd703ae68e40a151f5c338f1#npm:2.145.0"],\
           ["aws-custom-resources", "workspace:workspaces/aws-custom-resources"],\
           ["constructs", "npm:10.3.0"],\
